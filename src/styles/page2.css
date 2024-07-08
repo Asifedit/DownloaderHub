@@ -1,0 +1,106 @@
+.page2 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.boxs {
+    display: flex;
+    gap: 1rem;
+}
+.box {
+    position: relative;
+    height: 15vh;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 10px 5px;
+    background-color: rgba(221, 221, 221, 0.877);
+    border-radius: 10px;
+}
+.Facbook:hover .fa-facebook{
+    color: rgb(0, 89, 255);
+    transition: 0.5s;
+}
+.YouTube:hover .fa-youtube{
+    color: rgb(255, 0, 0);
+     transition: 0.5s;
+     
+}
+.TikTok:hover .fa-tiktok{
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px red, -2px -2px 2px rgb(0, 68, 255) ;
+    transition: 0.5s;
+}
+.Instagram:hover .fa-instagram{
+    background: linear-gradient(-45deg ,blue,rgb(255, 0, 128),red,yellow);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 0.5s;
+}
+.box i{
+    font-size: 62px;
+}
+.box p{
+  font-size: 25px;
+}
+body.dark-mode .box:hover{
+    background-color: rgba(255, 255, 255, 0.877);
+    color: black;
+}
+body.dark-mode .box{
+    background-color: rgba(78, 77, 77, 0.877);
+}
+.topic{
+    font-size: 70px;
+    font-family: "Anton SC", sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding: 20px 0px;
+    color: #23ADFD;
+}
+.box:hover:before, .box:hover:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg,#ff0000, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+    #0000ff, #00ff00,#ffff00, #ff0000);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  border-radius: 10px;
+  animation: steam 10s linear  infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400% 0;
+  }
+}
+
+.box:after {
+  filter: blur(30px);
+}
+@media only screen and (max-width: 630px) {
+  .box{
+    width: 17vw;
+    height: 70px;
+  }
+  .box p{
+  font-size: 13px;
+}
+.box i{
+   font-size: 28px;
+}
+.topic{
+  font-size: 40px;
+}
+  }
