@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../styles/page1.css";
 import Info from "./Info";
+require("dotenv").config();
 
 const Page1 = () => {
     const [inputValue, setInputValue] = useState("");
@@ -11,7 +12,7 @@ const Page1 = () => {
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
     };
-
+const apiKey = process.env.apikey;
     const handleButtonClick = async () => {
         if (inputValue) {
             setIsLoading(true);
@@ -25,7 +26,7 @@ const Page1 = () => {
                         },
                         headers: {
                             "X-RapidAPI-Key":
-                                "86fddece5fmshd726daacaa177adp19c4afjsne0b99402ad9c",
+                                apiKey,
                             "X-RapidAPI-Host":
                                 "social-media-video-downloader.p.rapidapi.com",
                         },
